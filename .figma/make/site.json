@@ -1,0 +1,10 @@
+{
+  "description": "This landing page showcases IT services for mobile and web app development, targeting decision makers and startup founders with clear value propositions and a modern design.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
