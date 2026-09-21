@@ -1,9 +1,19 @@
+---
+import '../index.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NusaBuild - Build Partner untuk Mobile & Web Apps</title>
+    <title>{title}</title>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="NusaBuild adalah partner andalan untuk pembuatan aplikasi mobile dan web. Kami membangun produk digital berkinerja tinggi yang siap skala untuk bisnis Anda." />
@@ -18,12 +28,12 @@
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nusabuild.id/" />
-    <meta property="og:title" content="NusaBuild - Build Partner untuk Mobile & Web Apps" />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content="Membangun aplikasi mobile & web untuk tim yang serius bertumbuh. Mulai konsultasi gratis dengan ahlinya." />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="NusaBuild - Mobile & Web Apps" />
+    <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content="Partner terbaik untuk pengembangan aplikasi startup dan enterprise." />
 
     <!-- Icons & Theme -->
@@ -31,7 +41,6 @@
     <meta name="theme-color" content="#0891B2" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <slot />
   </body>
 </html>

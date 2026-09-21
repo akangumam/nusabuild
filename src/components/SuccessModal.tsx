@@ -178,7 +178,7 @@ export function SuccessModal({ onClose }: { onClose: () => void }) {
                 </div>
                 <div>
                   <p className="text-[11px] font-medium text-[#6B7280]">Rekening Bank Jago Syariah</p>
-                  <p className="text-[13px] font-normal text-[#1F2937]">Khaerul Umam (***3321)</p>
+                  <p className="text-[13px] font-normal text-[#1F2937]">Khaerul Umam (*****8994)</p>
                 </div>
               </div>
             </div>
