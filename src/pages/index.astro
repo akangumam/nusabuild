@@ -162,6 +162,30 @@ const SERVICES = [
         </div>
       </section>
 
+      {/* Logos Marquee */}
+      <section class="bg-ink overflow-hidden py-12">
+        <div class="mx-auto max-w-6xl px-4 text-center mb-10">
+          <p class="text-sm font-medium uppercase leading-5 tracking-wider text-white/50">Dipercaya oleh</p>
+        </div>
+        <div class="relative flex w-full flex-nowrap overflow-hidden [-webkit-mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+          <div class="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-marquee gap-16 pr-16 w-max hover:[animation-play-state:paused]">
+            <!-- Set 1 -->
+            <img src="/logo-bapenda.svg" alt="Bapenda" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="/Muhammadiyah Logo.svg" alt="Muhammadiyah" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="/OJK Logo.svg" alt="OJK" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="/PGN (Pertamina Gas Negara).svg" alt="PGN" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="/Korps Lalu Lintas.svg" alt="Korlantas" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            
+            <!-- Set 2 -->
+            <img src="/logo-bapenda.svg" alt="Bapenda" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="/Muhammadiyah Logo.svg" alt="Muhammadiyah" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="/OJK Logo.svg" alt="OJK" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="/PGN (Pertamina Gas Negara).svg" alt="PGN" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="/Korps Lalu Lintas.svg" alt="Korlantas" class="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+          </div>
+        </div>
+      </section>
+
       {/* Member Discount (Interactive React Component) */}
       <MemberDiscount client:visible />
 

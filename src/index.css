@@ -15,6 +15,13 @@
   --color-discount: #ecfdf5;
   --color-success: #10b981;
   --color-error: #ef4444;
+
+  --animate-marquee: marquee 40s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 :root {

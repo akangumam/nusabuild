@@ -38,3 +38,16 @@ jobs:
       - name: Deploy to VPS via Rsync
         # --delete akan menghapus file di VPS yang sudah tidak ada di hasil build terbaru
         run: rsync -avz --delete ./dist/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/opt/web/nusabuild/dist/
+
+      - name: Post-Deploy (Permissions & Nginx Reload)
+        run: |
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
+            # Set ownership ke www-data dan pastikan file statis bisa dibaca oleh Nginx
+            chown -R www-data:www-data /opt/web/nusabuild/dist &&
+            find /opt/web/nusabuild/dist -type d -exec chmod 755 {} \; &&
+            find /opt/web/nusabuild/dist -type f -exec chmod 644 {} \; &&
+            
+            # Reload konfigurasi Nginx di dalam container tanpa downtime
+            # CATATAN: Ubah 'nginx' dengan nama container Nginx Anda (misal: 'nginx-proxy' atau 'nusabuild-nginx-1')
+            docker exec nginx nginx -s reload
+          "
